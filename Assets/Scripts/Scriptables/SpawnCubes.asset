@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6862e91b668295046af7d4be0e608ef7, type: 3}
+  m_Name: SpawnCubes
+  m_EditorClassIdentifier: 
+  Effects:
+  - rid: 8988141770455908356
+  - rid: 8988141770455908357
+  - rid: 8988141770455908358
+  GameObject: {fileID: 0}
+  references:
+    version: 2
+    RefIds:
+    - rid: 8988141770455908356
+      type: {class: InstantiateEffect, ns: , asm: Assembly-CSharp}
+      data:
+        Enabled: 1
+        Prefab: {fileID: 491107723722469803, guid: 86b93c055d609714c8d2226f4dc77fa7, type: 3}
+    - rid: 8988141770455908357
+      type: {class: WaitEffect, ns: , asm: Assembly-CSharp}
+      data:
+        Enabled: 1
+        Timer: 1
+    - rid: 8988141770455908358
+      type: {class: InstantiateEffect, ns: , asm: Assembly-CSharp}
+      data:
+        Enabled: 1
+        Prefab: {fileID: 491107723722469803, guid: 86b93c055d609714c8d2226f4dc77fa7, type: 3}
