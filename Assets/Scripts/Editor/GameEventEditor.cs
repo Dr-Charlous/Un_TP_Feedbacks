@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.Linq;
+using Unity.VisualScripting;
 
 [CustomEditor(typeof(GameEvent))]
 public class GameEventEditor : Editor
@@ -55,6 +56,10 @@ public class GameEventEditor : Editor
             EditorGUI.DrawRect(line, Color.black);
         }
 
+        var header = rect;
+        header.width = 10;
+        EditorGUI.DrawRect(header, gameEvent.Effects[index].GetColor(gameEvent));
+
         SerializedProperty element = _effects.GetArrayElementAtIndex(index);
         SerializedProperty enabledProperty = element.FindPropertyRelative("Enabled");
         rect.x += 15;
@@ -73,7 +78,7 @@ public class GameEventEditor : Editor
 
     private void DrawHeader(Rect rect)
     {
-
+        //EditorGUI.DrawRect(rect, Color.red);
     }
 
     private void AddDropDown(Rect rect, ReorderableList list)

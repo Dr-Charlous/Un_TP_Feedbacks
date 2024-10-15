@@ -10,11 +10,21 @@ public class InstantiateEffect : GameEffect
 
     public override IEnumerator Execute(GameEvent gameEvent)
     {
-        var obj = GameObject.Instantiate(Prefab, gameEvent.GameObject.transform.position, Quaternion.identity);
+        GameObject obj;
+
+        if (gameEvent.GameObject != null)
+            obj = GameObject.Instantiate(Prefab, gameEvent.GameObject.transform.position, Quaternion.identity);
+        else 
+            obj = GameObject.Instantiate(Prefab, Vector3.zero, Quaternion.identity);
 
         if (IsRef)
             gameEvent.GameObject = obj;
 
         yield break;
+    }
+
+    public override Color GetColor(GameEvent gameEvent)
+    {
+        return Color.red;
     }
 }

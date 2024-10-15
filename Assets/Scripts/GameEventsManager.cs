@@ -24,14 +24,19 @@ public class GameEventsManager : MonoBehaviour
 
     public static void PlayEvent(string eventName, GameObject go)
     {
-        if (s_instance._events[eventName].GameObject == null)
+        if (s_instance._events[eventName].GameObject == null && go != null)
             s_instance._events[eventName].GameObject = go;
         s_instance.StartCoroutine(s_instance._events[eventName].Execute());
     }
 
     private void Start()
     {
-        foreach (var item in GameEvents)
-            PlayEvent(item.name, this.gameObject);
+        //foreach (var item in GameEvents)
+        //    PlayEvent(item.name, this.gameObject);
+
+        for (var i = 0; i < 10; i++)
+        {
+            GameEventsManager.PlayEvent("CubeColor", null);
+        }
     }
 }

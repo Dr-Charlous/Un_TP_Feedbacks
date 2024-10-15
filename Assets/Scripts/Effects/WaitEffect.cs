@@ -12,4 +12,9 @@ public class WaitEffect : GameEffect
     {
         yield return new WaitForSeconds(Timer);
     }
+
+    public override Color GetColor(GameEvent gameEvent)
+    {
+        return Color.green;
+    }
 }

@@ -12,4 +12,9 @@ public class GameEffect
     {
         yield break;
     }
+
+    public virtual Color GetColor(GameEvent gameEvent)
+    {
+        return Color.white;
+    }
 }

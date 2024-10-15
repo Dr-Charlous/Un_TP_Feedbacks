@@ -25,6 +25,7 @@ MonoBehaviour:
       data:
         Enabled: 1
         Prefab: {fileID: 491107723722469803, guid: 86b93c055d609714c8d2226f4dc77fa7, type: 3}
+        IsRef: 0
     - rid: 8988141770455908357
       type: {class: WaitEffect, ns: , asm: Assembly-CSharp}
       data:
@@ -35,3 +36,4 @@ MonoBehaviour:
       data:
         Enabled: 1
         Prefab: {fileID: 491107723722469803, guid: 86b93c055d609714c8d2226f4dc77fa7, type: 3}
+        IsRef: 0

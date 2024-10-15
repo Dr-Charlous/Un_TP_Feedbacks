@@ -14,4 +14,9 @@ public class ChangeMaterialEffect : GameEffect
         gameEvent.GameObject.GetComponent<Renderer>().material = Material;
         yield break;
     }
+
+    public override Color GetColor(GameEvent gameEvent)
+    {
+        return Color.blue;
+    }
 }
